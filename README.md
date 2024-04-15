@@ -1,49 +1,24 @@
-# Image-Manip
+# Manipulating Images Using Python and C++
 
-Create a fun image manipulator!
+This Repo utilizes Python and C++ to either mirror, flip, or make a kaleidoscope image.
 
-For this project, you will use C++ and Python to manipulate an image by flipping, mirroring, and inverting it.
+This program is meant to be run via the command line, the program begins in C++ and prompts the user for an image filename.
+Once the filename is validated, it will ask the user for a manipulation. Once it has this information, it calls the Python file,
+suppling the image file and manipulation type as command line arguments. The python file uses the CV2 libarary to created the manipulated image.
 
-You may work individually or with a partner of your choosing.
+The program searches for the supplied image file in the same directory that the C++ file is in, if whatever filename you supplied is not found it will use
+the default file `autumn.jpg`. The program is set to display the original image, the manipulated image and a kaleidoscope image side by side.
 
 ## Setup
 
-Use this Guided Project template to create a new repository (see [GitHub-with-CLion](https://github.com/uvmcs2300s2024/GitHub-with-CLion) repo for directions).
-**Your repository must be named with the convention: Image-Manip-netid**, where netid is your UVM NetID username.
-* If you are collaborating, the format is Image-Manip-netid1-netid2. Have one partner create the repository and give the other partner access on GitHub: on the repository page, go to the Settings tab, choose Manage Access, and add the person with their GitHub username.
+In order to run this program you will need to install Python and C++, all the other includes and imports are already included in the C++ and Python files.
 
-Remember to commit and push frequently.
+To run the program use the command line commands: `g++ -std=c++17 -o manipulator main.cpp` to compile and either `./manipulator` (Mac/Linux) or `manipulator` (Windows) to run.
 
-## Image Manipulations
-
-It is intended that you will run this program from command line. You can still clone it into CLion and edit the files in CLion, but we recommend you run the program in your CLI. 
-
-Your program will start in C++ and prompt the user for an image filename. After validating it, it will ask the user for a manipulation. Once it has that information, it calls the Python file and gives the information as command line arguments.
-
-The Python file uses the CV2 library to create the manipulated image. You will display the original image, the chosen manipulation next to it in a separate window, and then finally a kaleidoscope image (see `autumn.jpg` and `autumn_kaleidoscope.jpg` for an example of what this manipulation will look like).
-
-To get the program working, this is what you need to do:
-1. Read through `main.cpp`.
-1. Below main, implement the three functions declared above main.
-1. Read through `render.py`.
-1. Complete all TODOs in `render.py`.
-1. Run the program to manipulate autumn.jpg. To run the program, use the commands:
-    * `g++ -std=c++17 -o manipulator main.cpp` to compile
-    * either `./manipulator` (Mac/Linux) or `manipulator` (Windows) to run.
-        * If you get a Python import error: use pip in the command line to install the package: `pip3 install opencv-python`.
-1. Find at least one other valid image file, put it in your project folder, add it to Git, and run it through the image manipulator.
-    * Make sure your image is appropriate.
-
-## Grading
-
-If you are collaborating, both partners have to submit the project.
-
-### Grading Rubric
-- [ ] (6 pts) Implement the three functions in `main.cpp`.
-- [ ] (12 pts) Complete all TODOs in `render.py`.
-- [ ] (2 pt) Include a valid second image in your repository.
-
+To exit the program simply press the `esc` key once the images have loaded or `ctrl` + `c` to exit in the command line.
 
 ## Resources
 - https://www.geeksforgeeks.org/how-to-validate-image-file-extension-using-regular-expression/
 - https://stackoverflow.com/questions/59022814/how-to-check-if-a-file-exists-in-c
+
+This project includes starter code from UVM professor Lisa Dion, I do not declare this project as solely my own.
